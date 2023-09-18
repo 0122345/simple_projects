@@ -17,9 +17,7 @@ body {
 } 
 
 canvas {
-    border: 2px solid steelblue;
-    place-items: center;
-
+    border: 1px solid steelblue;
 } 
 
 .toolbox {
@@ -27,6 +25,7 @@ canvas {
     border: 1px solid slateblue;
     display: flex;
     width: 804px;
+    margin-bottom: 20px;
     padding: 1rem;
 }
 
