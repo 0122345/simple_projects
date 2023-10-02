@@ -46,3 +46,11 @@ canvas {
 .toolbox > *:last-child {
     margin-left: auto;
 } 
+@media screen and (min-width: 480px) {
+  body {
+     width: 45%;
+  }
+}
+
+
+
