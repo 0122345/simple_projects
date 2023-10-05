@@ -1,4 +1,4 @@
-    const hourEl = document.querySelector('.hr')
+    const hourEl = document.querySelector('.hour')
     const minuteEl = document.querySelector('.minute')
     const secondEl = document.querySelector('.second')
     const timeEl = document.querySelector('.time')
@@ -21,25 +21,27 @@
         }
     });
 
-
     
     function setTime() {
         const time = new Date();
         const month = time.getMonth();
         const  day = time.getDay();
         const  hour = time.getHours();
-        const hoursForClock = hours % 12;
+        const hoursForClock = hour % 12;
         const minute = time.getMinutes();
         const seconds= time.getSeconds();
         
         hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0, 11, 0, 360)}deg)`
-         minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0, 59, 0, 360)}deg)`
-         secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0, 59, 0, 360)}deg)`
+         minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale( minute, 0, 59, 0, 360)}deg)`
+         secondEl.style.transform = `translate(-50%, -100%) rotate(${scale( seconds, 0, 59, 0, 360)}deg)`
+
+         timeEl.innerHTML = `${hoursForClock}:${minute < 10 ? `0${minute}` : minute}`  
     }
     
     const scale = (num, in_min, in_max, out_min, out_max) => {
         return(num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
     }
-
-   
+    
     setTime();
+   
+    setInterval(setTime, 1000) 

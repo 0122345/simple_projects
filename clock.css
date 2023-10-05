@@ -72,22 +72,23 @@ body {
     height: 65px;
     width: 3px;
     transform-origin: bottom center;
+    transition: all 0.5s ease-in;
 }
 
-.needle.hr {
+.needle.hour {
     transform:  translate(-50%, -100%) rotate(0deg);
     background-color:  var(--primary-color);
     color: var(--secondary-color);
 }
 
 .needle.minute {
-    transform:  translate(-50%, -100%) rotate(30deg);
+    transform:  translate(-50%, -100%) rotate(0deg);
     background-color: rgb(192, 226, 66); 
     height: 100px;
 }
 
 .needle.second{
-    transform:  translate(-50%, -100%) rotate(45deg);
+    transform:  translate(-50%, -100%) rotate(0deg);
     height: 100px;
     background-color: blueviolet;
 }
