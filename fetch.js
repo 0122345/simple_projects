@@ -16,7 +16,7 @@ getData();
 
 
 async function getData() {
-    const res = await fetch('https://randomuser.me/api?results=50')
+    const res = await fetch('https://randomuser.me/api?results=170')
 
     const { results }= await res.json();
     
