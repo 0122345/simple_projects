@@ -26,6 +26,7 @@
         const time = new Date();
         const month = time.getMonth();
         const  day = time.getDay();
+        const date = time.getDate();
         const  hour = time.getHours();
         const hoursForClock = hour % 12;
         const minute = time.getMinutes();
@@ -36,6 +37,7 @@
          secondEl.style.transform = `translate(-50%, -100%) rotate(${scale( seconds, 0, 59, 0, 360)}deg)`
 
          timeEl.innerHTML = `${hoursForClock}:${minute < 10 ? `0${minute}` : minute}`  
+         dateEl.innerHTML = `${days[day]}, ${months[month]} `<span class = "circle">${date}</span>``
     }
     
     const scale = (num, in_min, in_max, out_min, out_max) => {
