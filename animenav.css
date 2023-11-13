@@ -11,8 +11,8 @@ body {
     background-image: linear-gradient(to bottom,
      #eafbff  0%,
      #eafbff 59%,
-     #529052 50%,
-     #5290f9 100%);
+     #905290 50%,
+     #f952b3 100%);
     font-family: 'Roboto' sans-serif;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@ nav {
 }
 
 nav.active {
-    width: 350px;
+    width: 370px;
 }
 
 nav ul {
@@ -51,7 +51,7 @@ nav.active  ul{
 }
 
 nav ul li {
-    transform:  rotateY(0deg);
+    transform: rotateY(0deg);
     opacity: 0; 
     transition: transform 0.6s linear, opacity 0.6s linear;
 }
