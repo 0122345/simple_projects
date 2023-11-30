@@ -38,8 +38,10 @@
 
          timeEl.innerHTML = `${hoursForClock}:${minute < 10 ? `0${minute}` : minute}`  
  
-         dateEl.innerHTML = `${days[day]}, ${months[month]} `<span class = "circle">${date}</span>``
+         dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`
     }
+
+    //${days[day]}, ${months[month]} `<span class= "circle">${date}</span>
     
     const scale = (num, in_min, in_max, out_min, out_max) => {
         return(num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
