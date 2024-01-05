@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clock</title>
     <link rel="stylesheet" href="clock.css">
-     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
 </head>
 <body>
     <button class="toggle">Dark mode</button>
@@ -20,6 +20,26 @@
         <div class="time"></div>
 
         <div class="date"><span class="circle"></span>
+        </div>
+        <div class="wrap" id="wrapping">
+            <p class="text-xl text-blue-400 p-3 hover:cursor-pointer active:cursor-pointer" onclick="expand()">
+             See more functions
+            </p> 
+            <div class="" id="stop">
+              <div id="stopwatch" class="flex flex-row justify-center text-4xl font-bold">
+                <span class="" id=""> 00 : 00 : 00</span>
+            </div>  
+            </div>
+            
+            <div class="" id="timely">
+              <div id="timerrl">
+                <span class="flex flex-row justify-center text-4xl font-bold m-8 " id="">
+                    0.
+                </span>
+            </div>
+            </div>
+            
+            
         </div>
     </div>
     <script src="clock.js"></script>

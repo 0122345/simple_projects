@@ -41,7 +41,7 @@
          dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`
     }
 
-    //${days[day]}, ${months[month]} `<span class= "circle">${date}</span>
+      
     
     const scale = (num, in_min, in_max, out_min, out_max) => {
         return(num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
@@ -50,3 +50,31 @@
     setTime();
    
     setInterval(setTime, 1000) 
+
+
+function expand() {
+    const ti = document.getElementById('timely');
+    const sto = document.getElementById('stop');
+
+    ti.style.display = 'none';
+    sto.style.display ='none'
+
+    addEventListener('click', (e) => {
+     e.preventDefault();
+        setTimeout(() => {
+ 
+                      if(e.target.classList == true) {
+                        sto.style.display ="none";
+                        ti.style.display = "none";
+                    }
+                    else {
+                   ti.style.display = 'block';
+                   sto.style.display = "block";
+            }
+                }, 1000);
+      
+    });
+//removeEventListener();
+}
+
+expand();
